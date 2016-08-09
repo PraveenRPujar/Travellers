@@ -107,7 +107,8 @@ TRVLS = {
     User: {},
     Validation: {},
     Registry: {},
-    Date: {}
+    Date: {},
+    Device: {}
 };
 //Initial App profile config
 TRVLS.Profile = {

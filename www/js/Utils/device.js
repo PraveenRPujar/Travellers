@@ -1,4 +1,4 @@
-TRVLS.Utility.getUserLocation = function () {
+TRVLS.Device.getUserLocation = function () {
 
     var location = {
             latitude: "",
