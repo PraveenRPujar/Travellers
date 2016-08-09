@@ -1,0 +1,58 @@
+<ion-view view-title="Profile">
+
+    <ion-nav-bar class="bar-stable bar-positive">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+            </button>
+        </ion-nav-buttons>
+
+
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+
+    <ion-content ng-controller="EditProfileCtrl">
+
+        <div class="list" ng-show="showEditProfile">
+
+            <label class="item item-input item-floating-label">
+                <span class="input-label">First Name</span>
+                <input type="text" placeholder="First Name" ng-model="firstName">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Last Name</span>
+                <input type="text" placeholder="Last Name" ng-model="lastName">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Email</span>
+                <input type="text" placeholder="Email" readonly ng-model="email">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Phone</span>
+                <input type="text" placeholder="Phone" ng-model="phone">
+            </label>
+
+        </div>
+
+
+        <button class="button button-full button-positive" on-tap="updateProfile()" ng-show="showEditProfile">
+            Update
+        </button>
+
+        <div class="list card" ng-show="status">
+            <div class="item item-avatar">
+                <h1>{{header}}</h1>
+            </div>
+            <div class="item item-body">
+                <p>
+                    User details updates successfully!
+                </p>
+                <button class="button button-full button-positive" on-tap="goBackToHome()">
+                    Ok
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

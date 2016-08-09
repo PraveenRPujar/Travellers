@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYjbeWHmhBbFE2RoWBczURIf3IW0VtFeE&amp;libraries=places" async defer></script>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
+
+    <!--Firebase library -->
+    <script src="lib/Firebase.js"></script>
+
+
+    <!-- Promises polyfill, incase the webview didn't support it!  -->
+    <script src="lib/Promises.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/Config/appConfig.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/Controller/LoginCtrl.js"></script>
+    <script src="js/Controller/HomeCtrl.js"></script>
+    <script src="js/Controller/CreateUserCtrl.js"></script>
+    <script src="js/Controller/FPCtrl.js"></script>
+    <script src="js/Controller/ProfileCtrl.js"></script>
+    <script src="js/Controller/NearMeCtrl.js"></script>
+    <script src="js/Controller/TripDetailsCtrl.js"></script>
+    <script src="js/Controller/AboutCtrl.js"></script>
+    <script src="js/Controller/NotificationCtrl.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/Services/createuserService.js"></script>
+
+    <script src="js/Utils/device.js"></script>
+    <script src="js/Utils/logger.js"></script>
+    <script src="js/Utils/constants.js"></script>
+    <script src="js/Utils/localStorage.js"></script>
+    <script src="js/Utils/user.js"></script>
+    <script src="js/Utils/util.js"></script>
+    <script src="js/Utils/validation.js"></script>
+    <script src="js/Utils/dateUtils.js"></script>
+
+    <script src="js/FirebaseUtils/fbConfig.js"></script>
+    <script src="js/FirebaseUtils/fbUtil.js"></script>
+
+</head>
+
+<body ng-app="travellers">
+
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view>
+        Loading View...
+    </ion-nav-view>
+
+
+</body>
+
+</html>

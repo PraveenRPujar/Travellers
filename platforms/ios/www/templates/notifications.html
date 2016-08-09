@@ -1,0 +1,33 @@
+<ion-view view-title="Notifications">
+
+    <ion-nav-bar class="bar-stable bar-positive">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+            </button>
+        </ion-nav-buttons>
+
+
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+
+    <ion-content>
+
+        <ion-list can-swipe="true">
+            <ion-item ng-repeat="item in items track by $index">
+                <h2>{{item.message}}
+                </h2>
+
+                <ion-option-button class="button-balanced" on-tap="joiningTrip($index)">
+                    Yes
+                </ion-option-button>
+                <ion-option-button class="button-assertive" on-tap="notJoiningTrip($index)">
+                    No
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

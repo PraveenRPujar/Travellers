@@ -1,0 +1,32 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <h1 class="title">Trip to..</h1>
+        <div class="buttons">
+            <button class="button" on-tap="tripCreatemodal.cancel()">Cancel</button>
+        </div>
+
+    </ion-header-bar>
+    <ion-content>
+        <div class="list list-inset">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Trip To</span>
+                <input type="text" placeholder="Trip To" maxlength="30" ng-model="tripDetails.tripName"> </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label ">About the place</span>
+                <input type="text" placeholder="About the place" maxlength="30" ng-model="tripDetails.tripDesc" ng-required="required"> </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label ">From</span>
+                <input type="text" placeholder="From" ng-model="tripDetails.from" readonly on-tap="tripDetails.showFromDate()"> </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label ">To</span>
+                <input type="text" placeholder="To" ng-model="tripDetails.to" readonly on-tap="tripDetails.showToDate()"> </label>
+        </div>
+
+        <div class="row">
+            <button class="button button-block button-positive" ng-disabled="tripDetails.tripName.trim().length === 0 || tripDetails.tripDesc.trim().length === 0" on-tap="tripCreatemodal.createTrip()">
+                Create </button>
+        </div>
+
+
+    </ion-content>
+</ion-modal-view>

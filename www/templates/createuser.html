@@ -1,0 +1,70 @@
+<ion-view view-title="New User Registration" class="view-bg">
+    <ion-nav-bar class="bar-positive">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content ng-controller="createUserCtrl">
+
+
+        <div class="list" ng-show="registration">
+
+            <label class="item item-input item-floating-label">
+                <span class="input-label">First Name</span>
+                <input type="text" placeholder="First Name" ng-model="firstName" maxlength="20" />
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Last Name</span>
+                <input type="text" placeholder="Last Name" ng-model="lastName" maxlength="20">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="Email" ng-model="email" ng-change="validate()" />
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Phone</span>
+                <input type="number" placeholder="Phone" ng-model="phone" />
+            </label>
+
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="Password" ng-model="password" ng-change="validate()" maxlength="20" />
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Repeat Password</span>
+                <input type="password" placeholder="Repeat Password" ng-model="rpassword" ng-change="validate()" maxlength="20" />
+            </label>
+
+        </div>
+
+        <ion-list ng-show="registration">
+            <ion-toggle ng-model="locationAccess" ng-change="fetchLocation()">
+                Allow to access the location
+            </ion-toggle>
+        </ion-list>
+
+        <button class="button button-full button-positive" on-tap="createUser()" ng-disabled="!isValid" ng-show="registration">
+            Sign Up
+        </button>
+
+        <div class="list card" ng-show="status">
+
+            <div class="item item-avatar">
+
+                <h1>{{header}}</h1>
+
+            </div>
+
+            <div class="item item-body">
+
+                <p>
+                    Registration Successfull. You can login now!
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </ion-content>
+</ion-view>

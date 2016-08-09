@@ -1,0 +1,40 @@
+<ion-view view-title="About">
+
+    <ion-nav-bar class="bar-stable bar-positive">
+
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+            </button>
+        </ion-nav-buttons>
+
+
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+
+    <ion-content>
+
+        <div class="list card">
+
+            <div class="item item-body">
+                <div class="item">
+                    <h1>v{{version}}</h1>
+                </div>
+
+                <div class="item">
+
+                    <a href="mailto:reddy.roopesh@gmail.com" style="text-decoration:none;">
+                        <button class="button button-block button-balanced">
+                            <i class="icon ion-email"></i> Email your feedback </button>
+                    </a>
+                </div>
+                <div>
+                    <a class="item assertive" href="#">
+                   Made with <i class="icon ion-heart"></i> on Hybrid Apps!
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view view-title="Trip Details">
+    <ion-nav-bar class="bar-positive">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button button-icon icon ion-plus" ng-show="isEditable" on-tap="openMemberModal()">
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-content>
+
+        <div class="card" ng-show="members.length === 0">
+            <div class="item item-text-wrap">
+                No members in the group!
+            </div>
+        </div>
+
+        <ion-list can-swipe="true" ng-show="members.length > 0">
+            <ion-item ng-repeat="member in members">
+                <h2>{{member.firstName}}
+                <span class="item-note">
+                {{member.status}}
+                </span></h2>
+
+                <ion-option-button class="button-assertive" ng-show="isEditable" on-tap="deleteMember($index)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

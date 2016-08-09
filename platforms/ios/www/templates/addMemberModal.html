@@ -1,0 +1,24 @@
+<ion-modal-view>
+
+    <ion-header-bar align-title="center" class="bar-positive">
+        <h1 class="title">Members</h1>
+        <div class="buttons">
+            <button class="button" on-tap="memberModal.cancel()">Cancel</button>
+        </div>
+
+    </ion-header-bar>
+    <ion-content>
+        <label class="item item-input">
+            <input type="text" ng-model="memberModal.srchText" placeholder="Search..." ng-change="memberModal.search()">
+        </label>
+        <ion-list ng-repeat="member in memberModal.members">
+            <ion-checkbox ng-model="member.isChecked">{{member.firstName}}</ion-checkbox>
+        </ion-list>
+
+    </ion-content>
+
+    <ion-footer-bar align-title="center" class="bar-positive" on-tap="memberModal.add()">
+        <h1 class="title">Add</h1>
+    </ion-footer-bar>
+
+</ion-modal-view>

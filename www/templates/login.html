@@ -1,0 +1,20 @@
+<ion-view view-title="Travellers" align-title="center" class="view-bg">
+    <ion-nav-bar class="bar-positive"> </ion-nav-bar>
+    <ion-content class="padding" ng-controller="LoginCtrl">
+
+        <div class="list list-inset">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="Email" ng-model="email" ng-required="required"> </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label item-floating-label">Password</span>
+                <input type="password" placeholder="Password" ng-model="password" ng-change="toggleLogin()"> </label>
+        </div>
+        <ion-list>
+            <ion-toggle ng-model="rememberMe" ng-change="storeEmail()"> Remember Me </ion-toggle>
+        </ion-list>
+        <button class="item item-icon-left button button-full button-positive" ng-disabled="disabled" on-tap="login()"> <i class="icon ion-lock-combination"></i>Login </button>
+        <button class="item item-icon-left button button-full button-positive" on-tap="goToCreateUser()"> <i class="icon ion-person-add"></i> New User - Signup </button>
+        <button class="item item-icon-left button button-full button-positive" on-tap="goToFP()"> <i class="icon ion-sad-outline"></i> Forgot Password </button>
+    </ion-content>
+</ion-view>
