@@ -35,7 +35,7 @@ appControllers.controller('createUserCtrl', function ($scope, $ionicLoading, $lo
             $ionicLoading.show({
                 template: TRVLS.Constants.FetchingLocation
             }).then(function () {
-                TRVLS.Utility.getUserLocation().then(function (location) {
+                TRVLS.Device.getUserLocation().then(function (location) {
                     userLocation = location;
                 }).catch(showError).done(function () {
                     $ionicLoading.hide();

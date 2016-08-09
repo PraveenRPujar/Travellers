@@ -9,7 +9,7 @@ appControllers.controller('NearMeCtrl', function ($scope, $ionicLoading, $ionicP
         template: TRVLS.Constants.FetchingPlaces
     }).then(function () {
 
-        TRVLS.Utility.getUserLocation().then(function (location) {
+        TRVLS.Device.getUserLocation().then(function (location) {
 
             var latLng = new google.maps.LatLng(location.latitude, location.longitude),
 
