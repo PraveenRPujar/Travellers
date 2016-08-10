@@ -14,7 +14,7 @@ appControllers.controller('AppCtrl', function ($scope, $location, $ionicLoading,
     };
 
     var clearReferences = function () {
-
+        TRVLS.Registry = {};
     };
 
 });

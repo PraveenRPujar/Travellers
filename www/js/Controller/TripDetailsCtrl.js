@@ -169,7 +169,6 @@ appControllers.controller('TripDetailsCtrl', function ($scope,
     };
 
     $scope.memberModal.search = function () {
-        console.log($scope.memberModal.srchText);
 
         var Members = memberList;
         $scope.memberModal.members = [];

@@ -32,3 +32,5 @@ TRVLS.Constants.MemberStatus = {
     1001: "Joined",
     1002: "Not In"
 };
+
+TRVLS.Constants.LocationTypes = ['bar', 'night_club', 'cafe', 'spa', 'restaurant', 'casino'];

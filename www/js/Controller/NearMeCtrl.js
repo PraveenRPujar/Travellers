@@ -26,7 +26,7 @@ appControllers.controller('NearMeCtrl', function ($scope, $ionicLoading, $ionicP
                 request = {
                     location: latLng,
                     radius: '2000',
-                    types: ['bar', 'night_club', 'cafe', 'spa', 'restaurant', 'casino']
+                    types: TRVLS.Constants.LocationTypes
                 };
 
             $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);

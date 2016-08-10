@@ -1,4 +1,4 @@
-var app = angular.module('travellers', ['ionic', 'travellers.controllers', 'travellers.services', 'ionic-datepicker']).run(function ($ionicPlatform) {
+var app = angular.module('travellers', ['ionic', 'travellers.controllers', 'ionic-datepicker']).run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
