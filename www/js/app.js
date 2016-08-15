@@ -102,6 +102,7 @@ TRVLS = {
     Constants: {},
     Config: {},
     FBUtils: {},
+    GMapsUtils: {},
     Storage: {},
     Profile: {},
     User: {},

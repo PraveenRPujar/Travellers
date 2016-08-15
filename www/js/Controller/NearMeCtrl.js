@@ -61,13 +61,11 @@ appControllers.controller('NearMeCtrl', function ($scope, $ionicLoading, $ionicP
 
         clearMarker($scope.markers);
 
-        var placeLoc = place.geometry.location,
-            marker = new google.maps.Marker({
-                map: $scope.map,
-                position: place.geometry.location
-            });
+        var marker = TRVLS.GMapsUtils.createMarker(place, $scope.map);
 
-        $scope.markers.push(marker);
+        if (marker !== undefined) {
+            $scope.markers.push(marker);
+        }
     }
 
     function clearMarker(markers) {

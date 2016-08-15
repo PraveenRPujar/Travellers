@@ -8,7 +8,14 @@
 }
 #map {
     width: 100%;
-    height: 50%;
+    height: 100%;
+}
+.mapHeader-bar {
+    height: 250px;
+    margin-top: 40px;
+}
+.places-list {
+    top: 200px;
 }
 .view-bg {
     background-color: #eee;

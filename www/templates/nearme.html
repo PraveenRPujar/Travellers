@@ -13,11 +13,13 @@
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
 
-    <ion-content>
-
+    <ion-header-bar class="mapHeader-bar">
         <div id="map" data-tap-disabled="true"></div>
+    </ion-header-bar>
 
-        <div class="list">
+    <ion-content class="has-subheader">
+
+        <div class="list places-list">
 
             <a ng-repeat="item in items" class="item item-thumbnail-left track by $index" on-tap="placesClicked($index)">
                 <img ng-src="{{ item.icon }}">
